@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="button1" layoutX="222.0" layoutY="62.0" mnemonicParsing="false" text="Добавить" />
+      <ComboBox fx:id="comboBox1" layoutX="64.0" layoutY="62.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="28.0" text="Название отряда:" />
+      <ListView fx:id="listView" layoutX="14.0" layoutY="135.0" prefHeight="251.0" prefWidth="157.0" />
+      <TextField fx:id="textField1" layoutX="135.0" layoutY="24.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="27.0" layoutY="66.0" text="Воин:" />
+      <Label layoutX="21.0" layoutY="113.0" text="Список воинов в отряде:" />
+      <Label layoutX="460.0" layoutY="30.0" text="Название отряда:" />
+      <Label layoutX="479.0" layoutY="68.0" text="Воин:" />
+      <Label layoutX="594.0" layoutY="113.0" text="Список воинов в отряде:" />
+      <Button fx:id="button2" layoutX="672.0" layoutY="64.0" mnemonicParsing="false" text="Добавить" />
+      <ComboBox fx:id="comboBox2" layoutX="518.0" layoutY="64.0" prefWidth="150.0" />
+      <TextField fx:id="textField2" layoutX="574.0" layoutY="26.0" />
+      <ListView fx:id="listView2" layoutX="584.0" layoutY="135.0" prefHeight="251.0" prefWidth="157.0" />
+      <TextArea fx:id="textArea" layoutX="222.0" layoutY="135.0" prefHeight="283.0" prefWidth="306.0" />
+      <Button fx:id="buttonBattle" layoutX="297.0" layoutY="424.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="157.0" text="Начать бой" />
+      <Button fx:id="removeButton1" layoutX="6.0" layoutY="387.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Удалить выбранного воина" />
+      <Button fx:id="removeButton2" layoutX="533.0" layoutY="387.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Удалить выбранного  воина" />
+      <Button fx:id="infoButton1" layoutX="6.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Информация о выбранном воине" />
+      <Button fx:id="infoButton2" layoutX="533.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Информация о выбранном воине" />
+   </children>
+</AnchorPane>
