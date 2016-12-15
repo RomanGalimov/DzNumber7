@@ -12,7 +12,7 @@ public class Squad {    //отряд
     private String name;//название отряда
     private ArrayList<Warrior> warrior;//сп и соквоинов вотряде
 
-    public Warrior getRandomWarrior() { //получение случайного воина из отряда
+    public Warrior getRandomWarrior() { //получение случайного воина из отряда к чему эти комментарии? разве из названия метода непонятно, что он делает?
         Random r = new Random();
         int ind, n = warrior.size();
         if (hasAliveWarriors())
@@ -41,12 +41,12 @@ public class Squad {    //отряд
                 warrior.add(new Viking());
 
             warrior.get(i).setSquadName(nameSquad);
-            warrior.get(i).setName("w_" + r.nextInt(100));
+            warrior.get(i).setName("w_" + r.nextInt(100)); //зачем эта w? на мой взгляд, просто мусор в логах
         }
     }
 
     public boolean hasAliveWarriors() { //проверка есть ли в отряде живые воины
-        for (int i = 0; i < warrior.size(); i++) {
+        for (int i = 0; i < warrior.size(); i++) { //foreach смотрелся бы лучше
             if (warrior.get(i).isAlive()) {
                 return true;
             }

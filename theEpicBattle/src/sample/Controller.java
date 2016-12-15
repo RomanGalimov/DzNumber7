@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 public class Controller {
     //список элементов управления
     @FXML
-    private Button button1;
+    private Button button1; //все элементы осмысленно переименовать
     @FXML
     private Button button2;
     @FXML
@@ -51,16 +51,17 @@ public class Controller {
                 "Викинг",
                 "Защитник"
         );
-        comboBox1.setItems(list);   //инициализация 2х полей данными
+        comboBox1.setItems(list);   //инициализация 2х полей данными //нужно сделать значения по умолчанию для списков
         comboBox2.setItems(list);   //о допустимых ви дах воинов
 
         button1.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             //Событие нажатия на кнопку "Добавить в первый отряд"
+            // если бы кнопка называлась addToFirstSquadButton, было бы понятно, что происходит, и комментарий стал бы не нужен
             @Override
             public void handle(MouseEvent mouseEvent) {
                 String getValueComboBox = comboBox1.getValue();
                 try {
-                    if (getValueComboBox.equals("Берсерк"))
+                    if (getValueComboBox.equals("Берсерк")) //для выбора из множества вариантов есть switch
                         listSquad1.add("Берсерк");
                     else if (getValueComboBox.equals("Лучник"))
                         listSquad1.add("Лучник");
@@ -120,7 +121,7 @@ public class Controller {
                             if (!squad2.hasAliveWarriors()) {
                                 textArea.appendText("Первая команда победила!\r\n");
                                 break;
-                            }
+                            }//дублирование кода. вынести в отдельный метод
                             w1 = squad1.getRandomWarrior();
                             w2 = squad2.getRandomWarrior();
 
@@ -141,7 +142,7 @@ public class Controller {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 int selectedId = listView.getSelectionModel().getSelectedIndex();
-                if (selectedId != -1) {
+                if (selectedId != -1) { //варианта с -1 вообще не должно быть
                     String itemToRemove = listView.getSelectionModel().getSelectedItems().toString();
                     listView.getItems().remove(selectedId);
                     listSquad1.remove(itemToRemove);
@@ -153,7 +154,7 @@ public class Controller {
         removeButton2.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             //нажатие на кнопку "Удалить извторого отряда"
             @Override
-            public void handle(MouseEvent mouseEvent) {
+            public void handle(MouseEvent mouseEvent) { //дублирование кода
                 int selectedId = listView2.getSelectionModel().getSelectedIndex();
                 if (selectedId != -1) {
                     String itemToRemove = listView2.getSelectionModel().getSelectedItems().toString();
@@ -185,7 +186,7 @@ public class Controller {
         infoButton2.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             //инофрмация о воине из второго отряда
             @Override
-            public void handle(MouseEvent mouseEvent) {
+            public void handle(MouseEvent mouseEvent) { //дублирование кода
                 int selectedId = listView2.getSelectionModel().getSelectedIndex();
                 if (selectedId != -1) {
                     String selectedItem = listView2.getSelectionModel().getSelectedItem();

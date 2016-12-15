@@ -6,7 +6,7 @@ import java.util.Objects;
  * Created by lushi on 21.11.2016.
  */
 public class Archer implements Warrior {
-    private String name, squad;
+    private String name, squad; //хорошо бы вынести общее поведение в абстрактный класс
     private int health = 80;
     private int damage = 80;
 
